@@ -6,19 +6,20 @@
 
 
 /**
-	Vista del CRUD
-	Contiene el formulario de la tabla de personajes
+	Vista Inicio de la página
+	Contiene una descripción de lo que vamos a hacer
 **/
-export class VistaCRUD{
+export class VistaInicio{
 	/**
 		Constructor de la clase
 	**/
 	constructor(div, controlador){
 		this.div = div
+		this.controlador = controlador
 		
 	}
 	/**
-		Mustra u oculta el div de la vistaCRUD.
+		Mustra u oculta el div de la vistaInicio.
 		@param ver {Boolean} True muestra la vista, False la oculta.
 	**/
 	mostrar(ver){
