@@ -1,0 +1,3 @@
+Expresión regular NOMBRE:
+
+^[A-Z][a-z\s]{2,10}$

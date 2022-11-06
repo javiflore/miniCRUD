@@ -1,0 +1,43 @@
+/* Javier Florencio Airado*/
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+*{
+	background-color: blue;
+	color: white;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+	max-width: 600px;
+	margin: 0px auto;
+}
+
+header{
+	font-size: 33px;
+	font-weight: bold;
+	font-style: italic;
+	background-color: lightblue;
+	padding: 20px;
+}
+
+nav > div{
+	margin: 0px;
+	/* background-color: white; */
+	display: inline-block;
+	font-size: 23px;
+	padding: 10px 20px;
+	border: 2px solid white;
+}
+
+nav > div:hover{
+	/* background-color: white; */
+	text-decoration: underline;
+}
+
+footer{
+	background-color: lightgrey;
+	color: black;
+	font-size: 12px;
+	padding: 7px;
+}
