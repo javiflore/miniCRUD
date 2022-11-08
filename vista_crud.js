@@ -3,29 +3,27 @@
 	@author Javier Florencio Airado
 **/
 
-
+import {Vista} from './vista.js'
 
 /**
 	Vista del CRUD
 	Contiene el formulario de la tabla de personajes
 **/
-export class VistaCRUD{
+export class VistaCRUD extends Vista{
 	/**
 		Constructor de la clase
 	**/
-	constructor(div, controlador){
-		this.div = div
+	constructor(controlador, div){
+		super(div)
+		this.controlador = controlador
 		
 	}
 	/**
 		Mustra u oculta el div de la vistaCRUD.
 		@param ver {Boolean} True muestra la vista, False la oculta.
 	**/
-	mostrar(ver){
-		if (ver)
-			this.div.style.display = 'block'
-		else
-			this.div.style.display = 'none'
+	mostrareadsh(){
+		
 	}
 	
 }

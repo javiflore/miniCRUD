@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 
 *{
-	background-color: blue;
+	background-color: #111128b8;
 	color: white;
 	font-family: 'Red Hat Display', sans-serif;
 }
@@ -19,6 +19,12 @@ header{
 	font-style: italic;
 	background-color: lightblue;
 	padding: 20px;
+	color: #12122a;
+	border-bottom: 2px solid white;
+}
+
+nav{
+	border-bottom: 2px solid white;
 }
 
 nav > div{
@@ -27,12 +33,38 @@ nav > div{
 	display: inline-block;
 	font-size: 23px;
 	padding: 10px 20px;
-	border: 2px solid white;
+	/* border: 2px solid white; */
 }
 
 nav > div:hover{
 	/* background-color: white; */
 	text-decoration: underline;
+}
+
+#divBuscador{
+	padding: 3px 5px;
+	border-bottom: 2px solid white;
+	margin-bottom: 15px;
+}
+
+#divBuscador > form > input[type="text"]{
+	background-color: white;
+}
+
+#divPersonajes{
+	display: block;
+}
+
+#divPersonajes > div{
+	display: inline-block;
+	width: 195px;
+	height: 200px;
+	text-align: center;
+	border: 1px solid white; 
+}
+
+#divMiniCRUD{
+	display: none;
 }
 
 footer{
