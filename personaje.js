@@ -4,7 +4,16 @@
 
 export class Personaje{
 	
-	constructor{
-		console.log('Estoy dentro de personaje')
+	constructor(nombre, descripcion, fechaAparicion, tipo){
+		
+		this.nombre = nombre
+		this.descripcion = descripcion
+		this.fechaAparicion = fechaAparicion
+		this.tipo = tipo
+		
+		tipos = ['humano','animal','divino','vegetal','mineral','otro']
+		
 	}
+	
+	
 }

@@ -1,3 +1,7 @@
+/**
+*	@author: Javier Florencio Airado <fjflorenc@gmail.com>
+**/
+
 export class VistaNav{
 	/**
 		Constructor de la clase.
@@ -10,20 +14,15 @@ export class VistaNav{
 		this.divPersonajes = this.nav.getElementsByTagName('div')[0]
 		this.divAlta = this.nav.getElementsByTagName('div')[1]
 		
-		console.log(this.divPersonajes)
-		
 		this.divPersonajes.onclick = this.pulsarPersonajes.bind(this)
 		this.divAlta.onclick = this.pulsarAlta.bind(this)
 	}
 	
 	pulsarPersonajes(){
-		console.log(this.controlador)
-		console.log('hola')
 		this.controlador.pulsarPersonajes()
 	}
 	
 	pulsarAlta(){
-		//console.log(this.controlador)
 		this.controlador.pulsarAlta()
 	}
 	

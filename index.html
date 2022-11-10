@@ -28,9 +28,27 @@
 	</div>
 	<div id="divMiniCRUD">
 		<h1>CRUD PERSONAJES</h1>
-		<button>
-			Añadir personaje
-		</button>
+		<form>
+		<label>Nombre: </label>
+		<input type="text" placeholder="Nombre"><br/>
+		<label>Fecha de aparición: </label>
+		<input type="text" placeholder="MM-YYYY"><br/>
+		<label>Tipo de personaje: </label>
+		<select>
+			<option value=''></option>
+			<option>Humano</option>
+			<option>Divino</option>
+		</select><br/>
+		<label>Imagen: </label>
+		<input type="text" placeholder="URL"><br/>
+		<!-- <button>Borrar</button> -->
+		<!-- <button>Aceptar</button> -->
+		<label>Descripción: </label></br>
+		<textarea rows="4" cols="50">
+		</textarea>
+		</form>
+		<button>Borrar</button>
+		<button>Aceptar</button>
 	</div>
 	<footer>@javi_flore - © Todos los derechos reservados</footer>
 	<script type="module" src="controlador.js"></script>

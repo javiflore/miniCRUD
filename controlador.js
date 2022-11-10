@@ -25,7 +25,7 @@ class Controlador{
 		Crea las vistas y el modélo.
 	**/
 	iniciar(){
-		
+		this.modelo = new Modelo()
 		//localizamos los elementos
 		this.nav = document.getElementsByTagName('nav')[0]
 		this.divBuscador = document.getElementById('divBuscador')
@@ -40,17 +40,20 @@ class Controlador{
 	}
 	
 	pulsarPersonajes(){
-		console.log('Personajes')
+		this.vistaBuscador.mostrar(true)
 		this.vistaPersonajes.mostrar(true)
 		this.vistaAlta.mostrar(false)
-		this.vistaBuscador.mostrar(true)
 	}
 	
 	pulsarAlta(){
-		console.log('Alta')
 		this.vistaPersonajes.mostrar(false)
 		this.vistaAlta.mostrar(true)
 		this.vistaBuscador.mostrar(false)
+	}
+	
+	aceptarCrud(nombre, fechaAparicion, tipo, url, descripcion){
+		
+		this.modelo.insertarPersonaje(nombre, fechaAparicion, tipo, url, descripcion)
 	}
 	
 }

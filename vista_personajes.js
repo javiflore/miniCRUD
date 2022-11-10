@@ -17,4 +17,18 @@ export class VistaPersonajes extends Vista{
 		super(div)
 		this.controlador = controlador
 	}
+	
+	mostrarPersonajes(){}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
