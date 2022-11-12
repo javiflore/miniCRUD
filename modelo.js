@@ -14,6 +14,8 @@ export class Modelo{
 		
 		this.crearBBDD()
 		
+		this.avisar()
+		
 	}
 	
 	registrar(callback){
@@ -38,8 +40,9 @@ export class Modelo{
 		}
 		
 		this.openRequest.onsuccess = (evento) => {
-			
+			console.log('crearbbdd')
 			this.db = evento.target.result
+			this.avisar()
 		}
 	}
 	
@@ -55,11 +58,25 @@ export class Modelo{
 			'descripcion': descripcion
 		}
 		almacen.add(personaje)
-		
+		this.avisar()
 	}
 
-	descargaPersonajes(){
-		//
+	getPersonajes(){
+		
+		const almacen = this.db.transaction('tablaPersonajes', 'readonly').objectStore('tablaPersonajes')
+		
+		const peticion = almacen.getAll()
+		
+		peticion.onerror = (event) => {
+			console.log('Fallo lectura')
+		}
+		peticion.onsuccess = (evento) => {
+			const data = event.target.result
+			
+			this.listaPersonajes = data
+			
+			console.log('Leído', data)
+		}
 	}
 	
 }

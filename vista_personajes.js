@@ -15,10 +15,34 @@ export class VistaPersonajes extends Vista{
 	**/
 	constructor(controlador, div){
 		super(div)
+		this.div = div
 		this.controlador = controlador
+		
+		//hacemos que la vista OBSERVE
+		this.modelo = this.controlador.getModelo()
+		this.modelo.registrar(this.actualizar.bind(this))
+		
 	}
 	
-	mostrarPersonajes(){}
+	actualizar(){
+		
+		console.log('lista de personajes en la bbdd: ', hola)
+		
+		let listaPersonajes = ["Adios", "hola"]
+		
+		for (let i = 0; i < listaPersonajes.length; i++ ){
+			let divPersonaje = document.createElement('div')
+			this.div.appendChild(divPersonaje)
+			divPersonaje.appendChild(document.createTextNode(listaPersonajes[i]))
+			divPersonaje.id = i
+		}
+	}
+	
+	mostrarPersonajes(){
+		console.log('Mostrando Personajes')
+		let listaPersonajes = this.controlador.getPersonajes()
+		console.log(listaPersonajes)
+	}
 	
 	
 	

@@ -25,7 +25,12 @@ class Controlador{
 		Crea las vistas y el modélo.
 	**/
 	iniciar(){
+		//creamos el modelo, y cuando termine, de crearse el modelo junto con la bbdd se crean las vistas
 		this.modelo = new Modelo()
+		this.modelo.registrar(this.crearVistas.bind(this))
+	}
+	
+	crearVistas(){
 		//localizamos los elementos
 		this.nav = document.getElementsByTagName('nav')[0]
 		this.divBuscador = document.getElementById('divBuscador')
@@ -51,9 +56,17 @@ class Controlador{
 		this.vistaBuscador.mostrar(false)
 	}
 	
+	getModelo(){
+		return this.modelo
+	}
+	
 	aceptarCrud(nombre, fechaAparicion, tipo, url, descripcion){
-		
 		this.modelo.insertarPersonaje(nombre, fechaAparicion, tipo, url, descripcion)
+	}
+	
+	getPersonajes(){
+		let listaPersonajes = this.modelo.getPersonajes()
+		return listaPersonajes
 	}
 	
 }
